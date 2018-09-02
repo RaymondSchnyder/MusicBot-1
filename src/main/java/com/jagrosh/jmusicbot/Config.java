@@ -62,6 +62,9 @@ public class Config
                     case "token":
                         token = value;
                         break;
+                    case "djrole":
+                        djrole = value;
+                        break;    
                     case "prefix":
                         prefix = value;
                         break;
@@ -159,6 +162,20 @@ public class Config
                 write = true;
             }
         }
+
+        if(djrole == null)
+        {
+            djrole = prompt("DJ Role is missing!")
+            if(djrole==null)
+            {
+                alert("Invalid User ID! Exiting.");
+                System.exit(0);
+            }else
+            {
+                lines.add("djrole="+djrole);
+                write = true;
+            }
+        }
         if(write)
         {
             StringBuilder builder = new StringBuilder();
@@ -198,6 +215,11 @@ public class Config
     public String getOwnerId()
     {
         return owner;
+    }
+
+    public String getDJRole()
+    {
+        return djrole;
     }
     
     public String getSuccess()

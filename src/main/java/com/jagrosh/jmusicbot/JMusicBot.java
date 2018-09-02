@@ -110,6 +110,7 @@ public class JMusicBot
                 .setPrefix(config.getPrefix())
                 .setAlternativePrefix(config.getAltPrefix())
                 .setOwnerId(config.getOwnerId())
+                .setDJRole(config.getDJRole()
                 .setEmojis(config.getSuccess(), config.getWarning(), config.getError())
                 .setHelpWord(config.getHelp())
                 .setLinkedCacheSize(200)
